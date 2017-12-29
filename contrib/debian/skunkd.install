@@ -1,0 +1,2 @@
+debian/bin/DIXId usr/bin
+src/DIXId usr/lib/DIXI
