@@ -465,10 +465,10 @@ void BlockBrowser::updateStatistics()
     int pPawrate = GetPoWMHashPS();
     double pPawrate2 = 0.000;
     int nHeight = pindexBest->nHeight;
-    double nSubsidy = 1;
+    double nSubsidy = 3;
     if(pindexBest->nHeight == 1)
     {
-        nSubsidy = 65000;
+        nSubsidy = 135000;
     }
     //uint64_t nStakeminconfirmations = 0, nMaxWeight = 0, nWeight = 0;
    // pwalletMain->GetStakeWeight(*pwalletMain, nWeight, nMaxWeight);
@@ -484,11 +484,11 @@ void BlockBrowser::updateStatistics()
     QString stakemin = QString::number(nWeight);
     QString stakemax = QString::number(nNetworkWeight);
     QString phase = "";
-    if (pindexBest->nHeight < 1)
+    if (pindexBest->nHeight < 21600)
     {
         phase = "PoW";
     }
-    else if (pindexBest->nHeight > 0 && pindexBest->nHeight < 10000000)
+    else if (pindexBest->nHeight > 21600 && pindexBest->nHeight < 10000000)
     {
         phase = "1.Stage PoW+PoS";
     }
